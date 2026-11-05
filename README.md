@@ -16,7 +16,7 @@
 
 ## 下载与安装
 
-**[下载 Mac 测试版](https://github.com/LeoXuLiang/qing-finder/releases/latest)** · [直接下载 Apple Silicon 安装包](https://github.com/LeoXuLiang/qing-finder/releases/download/v0.1.0/QingFinder-0.1.0-arm64.zip)
+**[下载 Mac 测试版](https://github.com/LeoXuLiang/qing-finder/releases/tag/v0.1.0)** · [直接下载 Apple Silicon 安装包](https://github.com/LeoXuLiang/qing-finder/releases/download/v0.1.0/QingFinder-0.1.0-arm64.zip)
 
 1. 下载并解压，将“轻右键.app”拖入“应用程序”。
 2. 打开轻右键，点“启用访达扩展…”，在系统设置中启用“轻右键”。
