@@ -1,0 +1,4 @@
+build/
+verification/
+.DS_Store
+__pycache__/
