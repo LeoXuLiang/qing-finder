@@ -1,4 +1,6 @@
-# 轻右键 · QingFinder
+# 轻右键
+
+<img src="Assets/AppIcon.png" width="128" height="128" alt="轻右键图标">
 
 一个免费、开源的 Mac 访达右键小工具。常用操作直接放在右键菜单第一层，无账号、无订阅，应用不发起网络请求。
 
@@ -16,7 +18,7 @@
 
 ## 下载与安装
 
-**[下载 Mac 测试版](https://github.com/LeoXuLiang/qing-finder/releases/tag/v0.1.0)** · [直接下载 Apple Silicon 安装包](https://github.com/LeoXuLiang/qing-finder/releases/download/v0.1.0/QingFinder-0.1.0-arm64.zip)
+**[下载 Mac 测试版](https://github.com/LeoXuLiang/qing-finder/releases/tag/v0.1.1)** · [直接下载 Apple Silicon 安装包](https://github.com/LeoXuLiang/qing-finder/releases/download/v0.1.1/QingFinder-0.1.1-arm64.zip)
 
 1. 下载并解压，将“轻右键.app”拖入“应用程序”。
 2. 打开轻右键，点“启用访达扩展…”，在系统设置中启用“轻右键”。
@@ -35,7 +37,7 @@ python3 scripts/build.py
 zsh scripts/test.sh
 ```
 
-生成 `build/轻右键.app` 和 `build/QingFinder-0.1.0-arm64.zip`。编译只使用系统 AppKit、FinderSync 和 Foundation，无第三方库。构建脚本使用本机签名。
+生成 `build/轻右键.app` 和 `build/QingFinder-0.1.1-arm64.zip`。编译只使用系统 AppKit、FinderSync 和 Foundation，无第三方库。构建脚本使用本机签名。
 
 ## 卸载
 

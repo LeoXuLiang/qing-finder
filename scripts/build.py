@@ -25,8 +25,11 @@ for bundle in [APP, EXT]:
     (bundle / 'Contents/MacOS').mkdir(parents=True, exist_ok=True)
     (bundle / 'Contents/Resources').mkdir(parents=True, exist_ok=True)
 
-common = dict(CFBundleInfoDictionaryVersion='6.0', CFBundleVersion='1',
-              CFBundleShortVersionString='0.1.0', LSMinimumSystemVersion='14.0')
+common = dict(CFBundleInfoDictionaryVersion='6.0', CFBundleVersion='2',
+              CFBundleShortVersionString='0.1.1', LSMinimumSystemVersion='14.0',
+              CFBundleIconFile='AppIcon.icns')
+for bundle in [APP, EXT]:
+    shutil.copy2(ROOT / 'Assets/AppIcon.icns', bundle / 'Contents/Resources/AppIcon.icns')
 plist(APP / 'Contents/Info.plist', dict(common,
     CFBundleIdentifier='local.qingfinder.app', CFBundleName='轻右键',
     CFBundleDisplayName='轻右键', CFBundleExecutable='QingFinder',
@@ -58,11 +61,11 @@ signed = subprocess.run(['codesign', '-d', '--entitlements', '-', '--xml', str(E
 assert plistlib.loads(signed).get('com.apple.security.app-sandbox') is True
 run('codesign', '--force', '--sign', '-', APP)
 run('codesign', '--verify', '--deep', '--strict', '--verbose=2', APP)
-archive = BUILD / 'QingFinder-0.1.0-arm64.zip'
+archive = BUILD / 'QingFinder-0.1.1-arm64.zip'
 with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED) as package:
     for path in sorted(APP.rglob('*')):
         if path.is_file():
             package.write(path, str(path.relative_to(BUILD)))
-# Keep the original local package name for existing verification scripts.
-shutil.copy2(archive, BUILD / '轻右键-0.1.0-arm64.zip')
+# Provide a Chinese-named copy for local downloads.
+shutil.copy2(archive, BUILD / '轻右键-0.1.1-arm64.zip')
 print(APP)

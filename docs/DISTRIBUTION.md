@@ -1,11 +1,11 @@
 # 分发与兼容性
 
-## 首发版本
+## 当前版本
 
-- 版本：0.1.0，公开测试版。
+- 版本：0.1.1，公开测试版。
 - 架构：arm64（Apple Silicon），不包含 Intel 二进制。
 - 编译最低目标：macOS 14；仅在 macOS 27.0.1 完成实际访达界面验收。
-- 下载包：`QingFinder-0.1.0-arm64.zip`；同一 Release 的 `SHA256SUMS.txt` 提供校验值。
+- 下载包：`QingFinder-0.1.1-arm64.zip`；同一 Release 的 `SHA256SUMS.txt` 提供校验值。
 - 签名：ad-hoc 本机签名，未使用 Developer ID、未公证、未上架 Mac App Store。GitHub 发布不等于 Apple 审核通过。
 
 其他 Mac 下载后可能被 Gatekeeper 拦截，不能承诺解压即用。当前可选择下载源码并运行 `python3 scripts/build.py` 在本机构建；本机编译也不代表获得 Apple 审核或公证。安全机制说明见 [Apple 官方文档](https://support.apple.com/zh-cn/102445)。后续公证版需要有效的 Developer ID 签名，见 [Apple 公证说明](https://developer.apple.com/documentation/security/notarizing-macos-software-before-distribution)。
